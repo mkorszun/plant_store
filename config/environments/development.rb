@@ -28,16 +28,11 @@ PlantStore::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.action_mailer.default_url_options = { :host => 'development.plantstore.cloudcontrolled.com' }
-  config.action_mailer.delivery_method = :smtp
-
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      :port           => 587,
-      :address        => 'smtp.mailgun.org',
-      :user_name      => 'postmaster@cloud42.mailgun.org',
-      :password       => '2tlqgjnh8gd9',
-      :authentication => :plain
+      :port           => 1025,
+      :address        => 'localhost',
   }
 
 end
