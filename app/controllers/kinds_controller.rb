@@ -12,6 +12,7 @@ class KindsController < ApplicationController
 
   def new
     @kind = Kind.new
+    @kind.build_treatment
   end
 
   def edit
@@ -61,7 +62,7 @@ class KindsController < ApplicationController
   end
 
   def kind_params
-    params.require(:kind).permit(:name, :latin_name, :user_id)
+    params.require(:kind).permit(:name, :latin_name, :user_id, treatment_attributes: [:temperature_min, :temperature_max, :comment])
   end
 
 end

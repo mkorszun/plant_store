@@ -10,6 +10,15 @@
   <dd><%= @kind.latin_name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
   <dd><%= @kind.user_id %></dd>
+  <% if @kind.treatment %>
+      <dt><strong>Temperature min:</strong></dt>
+      <dd><%= @kind.treatment.temperature_min %></dd>
+      <dt><strong>Temperature max:</strong></dt>
+      <dd><%= @kind.treatment.temperature_max %></dd>
+      <dt><strong>Comment:</strong></dt>
+      <dd><%= @kind.treatment.comment %></dd>
+  <% end %>
+
 </dl>
 
 <div class="form-actions">

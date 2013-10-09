@@ -1,18 +1,40 @@
-<%= form_for @kind, :html => { :class => 'form-horizontal' } do |f| %>
-  <div class="control-group">
-    <%= f.label :name, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :name, :class => 'text_field' %>
+<%= form_for @kind, :html => {:class => 'form-horizontal'} do |f| %>
+    <div class="control-group">
+      <%= f.label :name, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :name, :class => 'text_field' %>
+      </div>
     </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :latin_name, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :latin_name, :class => 'text_field' %>
+    <div class="control-group">
+      <%= f.label :latin_name, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :latin_name, :class => 'text_field' %>
+      </div>
     </div>
-  </div>
-  <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")), kinds_path, :class => 'btn' %>
-  </div>
+
+    <%= f.fields_for :treatment do |t| %>
+        <div class="control-group">
+          <%= t.label :temperature_min, :class => 'control-label' %>
+          <div class="controls">
+            <%= t.text_field :temperature_min, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= t.label :temperature_max, :class => 'control-label' %>
+          <div class="controls">
+            <%= t.text_field :temperature_max, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= t.label :comment, :class => 'control-label' %>
+          <div class="controls">
+            <%= t.text_field :comment, :class => 'text_field' %>
+          </div>
+        </div>
+    <% end %>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")), kinds_path, :class => 'btn' %>
+    </div>
 <% end %>
