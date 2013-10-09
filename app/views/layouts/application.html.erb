@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= nav_bar  :responsive => true, :inverse => true do %>
+<%= nav_bar :responsive => true, :inverse => true do %>
     <%= menu_group do %>
+        <a class="brand" href="#">Plant Store 2.0</a>
         <%= menu_item "Home", root_path %>
         <%= menu_item "About", plants_path %>
         <%= menu_item "Contact", plants_path %>
