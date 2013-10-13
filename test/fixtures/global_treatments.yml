@@ -1,0 +1,73 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  watering: moderate
+  insolation: indirect
+  temperature_min: 14
+  temperature_max: 21
+  humidity: low
+  global_kind_id: 1
+
+two:
+  id: 2
+  watering: abundant
+  insolation: full
+  temperature_min: 16
+  temperature_max: 21
+  humidity: high
+  global_kind_id: 2
+
+three:
+  id: 3
+  watering: moderate
+  insolation: indirect
+  temperature_min: 16
+  temperature_max: 21
+  humidity: medium
+  global_kind_id: 3
+
+four:
+  id: 4
+  watering: moderate
+  insolation: full
+  temperature_min: 16
+  temperature_max: 21
+  humidity: medium
+  global_kind_id: 4
+
+five:
+  id: 5
+  watering: moderate
+  insolation: full
+  temperature_min: 18
+  temperature_max: 21
+  humidity: medium
+  global_kind_id: 5
+
+six:
+  id: 6
+  watering: moderate
+  insolation: indirect
+  temperature_min: 16
+  temperature_max: 21
+  humidity: medium
+  global_kind_id: 6
+
+seven:
+  id: 7
+  watering: moderate
+  insolation: full
+  temperature_min: 16
+  temperature_max: 21
+  humidity: high
+  global_kind_id: 7
+
+eight:
+  id: 8
+  watering: abundant
+  insolation: indirect
+  temperature_min: 16
+  temperature_max: 21
+  humidity: high
+  global_kind_id: 8

@@ -29,6 +29,8 @@ GEM
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
     builder (3.1.4)
+    classy_enum (3.3.1)
+      rails (>= 3.0)
     cloudcontrol-rails (0.0.6)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
@@ -136,6 +138,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  classy_enum
   cloudcontrol-rails (= 0.0.6)
   coffee-rails (~> 4.0.0)
   devise

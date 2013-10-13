@@ -62,11 +62,11 @@ class PlantsController < ApplicationController
   end
 
   def get_kinds
-    @kinds = Kind.where(:user => current_user)
+    @global_kinds = GlobalKind.all
   end
 
   def plant_params
-    params.require(:plant).permit(:name, :description, :kind_id, :kind)
+    params.require(:plant).permit(:name, :description, :global_kind_id)
   end
 
 end

@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131005230035) do
+ActiveRecord::Schema.define(version: 20131013120459) do
+
+  create_table "global_kinds", force: true do |t|
+    t.string   "name"
+    t.string   "latin_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "global_treatments", force: true do |t|
+    t.string   "watering"
+    t.string   "insolation"
+    t.integer  "temperature_min"
+    t.integer  "temperature_max"
+    t.string   "humidity"
+    t.text     "comment"
+    t.integer  "global_kind_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "global_treatments", ["global_kind_id"], name: "index_global_treatments_on_global_kind_id"
 
   create_table "kinds", force: true do |t|
     t.text     "name"
@@ -28,12 +49,23 @@ ActiveRecord::Schema.define(version: 20131005230035) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id",     null: false
-    t.integer  "kind_id"
+    t.integer  "user_id",        null: false
+    t.integer  "global_kind_id"
   end
 
-  add_index "plants", ["kind_id"], name: "index_plants_on_kind_id"
+  add_index "plants", ["global_kind_id"], name: "index_plants_on_global_kind_id"
   add_index "plants", ["user_id"], name: "index_plants_on_user_id"
+
+  create_table "treatments", force: true do |t|
+    t.integer  "temperature_min"
+    t.integer  "temperature_max"
+    t.text     "comment"
+    t.integer  "kind_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "treatments", ["kind_id"], name: "index_treatments_on_kind_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

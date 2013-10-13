@@ -3,6 +3,5 @@ PlantStore::Application.routes.draw do
   root :to => 'home#index'
   authenticate(:user) do
     resources :plants
-    resources :kinds
   end
 end

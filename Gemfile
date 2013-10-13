@@ -38,6 +38,7 @@ gem 'devise'
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
+gem 'classy_enum'
 
 group :production, :staging do
   gem "mysql2"

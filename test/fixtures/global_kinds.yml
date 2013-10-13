@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  name: Gerbera
+  latin_name: Gerbera jamesonii
+
+two:
+  id: 2
+  name: Chinese hibiscus
+  latin_name: Hibiscus rosa-sinensis
+
+three:
+  id: 3
+  name: Dracaena
+  latin_name: Dracena marginata
+
+four:
+  id: 4
+  name: Benjamin's fig
+  latin_name: Ficus benjamina
+
+five:
+  id: 5
+  name: Snake plant
+  latin_name: Sansevieria trifasciata
+
+six:
+  id: 6
+  name: Australian native monstera
+  latin_name: Scindapsus aureus
+
+seven:
+  id: 7
+  name: Dwarf Umbrella Tree
+  latin_name: Schefflera arboricola
+
+eight:
+  id: 8
+  name: Sword Fern
+  latin_name: Nephrolepsis exaltata
