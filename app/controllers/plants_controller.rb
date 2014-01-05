@@ -6,9 +6,21 @@ class PlantsController < ApplicationController
 
   def index
     @plants = Plant.where(:user => current_user)
+    respond_to do |format|
+      format.html
+      format.json {
+        render :json => @plant.to_json(:include => {:global_kind => {:include => :global_treatment, :only => [:name, :latin_name]}}, :only => [:id, :name, :description])
+      }
+    end
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.json {
+        render :json => @plant.to_json(:include => {:global_kind => {:include => :global_treatment, :only => [:name, :latin_name]}}, :only => [:id, :name, :description])
+      }
+    end
   end
 
   def new
