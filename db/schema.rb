@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131013120459) do
+ActiveRecord::Schema.define(version: 20140109204404) do
 
   create_table "global_kinds", force: true do |t|
     t.string   "name"
@@ -34,38 +34,27 @@ ActiveRecord::Schema.define(version: 20131013120459) do
 
   add_index "global_treatments", ["global_kind_id"], name: "index_global_treatments_on_global_kind_id"
 
-  create_table "kinds", force: true do |t|
-    t.text     "name"
-    t.text     "latin_name"
-    t.integer  "user_id",    null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "kinds", ["user_id"], name: "index_kinds_on_user_id"
-
   create_table "plants", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id",        null: false
+    t.integer  "user_id"
     t.integer  "global_kind_id"
   end
 
   add_index "plants", ["global_kind_id"], name: "index_plants_on_global_kind_id"
   add_index "plants", ["user_id"], name: "index_plants_on_user_id"
 
-  create_table "treatments", force: true do |t|
-    t.integer  "temperature_min"
-    t.integer  "temperature_max"
-    t.text     "comment"
-    t.integer  "kind_id"
+  create_table "tokens", force: true do |t|
+    t.string   "token"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "validity"
   end
 
-  add_index "treatments", ["kind_id"], name: "index_treatments_on_kind_id"
+  add_index "tokens", ["user_id"], name: "index_tokens_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

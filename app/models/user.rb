@@ -9,5 +9,6 @@ class User < ActiveRecord::Base
          :confirmable
 
   has_many :plant, dependent: :destroy
+  has_one :token
 
 end

@@ -1,12 +1,15 @@
 class Api::V1::TokensController < ApplicationController
 
   protect_from_forgery
+  require 'securerandom'
 
   def create
-    if auth()
-      render :json => { :token => 'sadasdasdsada' }
+    user = User.find_by_email(params[:email])
+    if user.valid_password?(params[:password])
+      token_str = get_token(user).token
+      render :json => {:token => token_str}
     else
-      render :json => { :errors => 'unauthorized' }, :status => :unauthorized
+      render :json => {:errors => 'unauthorized'}, :status => :unauthorized
     end
   end
 
@@ -20,9 +23,12 @@ class Api::V1::TokensController < ApplicationController
 
   private
 
-  def auth
-    user = User.find_by_email(params[:email])
-    user.valid_password?(params[:password])
+  def get_token(user)
+    Token.delete_all(user_id: user.id)
+    token_str = SecureRandom.uuid()
+    token = Token.new(:token => token_str, :user => user, :validity => Time.now + 12.hours)
+    token.save
+    return token
   end
 
 end
