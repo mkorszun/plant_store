@@ -5,6 +5,6 @@ class Api::V1::BaseController < ActionController::Base
   include Api::PlantsHelper
   include Api::TokensHelper
 
-  before_action :get_token, :auth_token, only: [:index, :show]
+  before_action :read_token, :authorize_token, only: [:index, :show]
 
 end
