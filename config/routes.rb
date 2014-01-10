@@ -9,8 +9,8 @@ PlantStore::Application.routes.draw do
     scope module: :v1 do
       match '/token' => 'tokens#create', :via => :post
       match '/token' => 'tokens#destroy', :via => :delete
-      match '/plant/:id(.:format)' => 'plants#show', :via => :get
-      match '/plant' => 'plants#index', :via => :get
+      match '/:key(.:format)/plant/:id(.:format)' => 'plants#show', :via => :get
+      match '/:key(.:format)/plant' => 'plants#index', :via => :get
     end
   end
 
