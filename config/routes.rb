@@ -7,8 +7,7 @@ PlantStore::Application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     scope module: :v1 do
-      match '/token' => 'tokens#create', :via => :post
-      match '/token' => 'tokens#show', :via => :get
+      match '/token' => 'tokens#create', :via => :get
       match '/:key(.:format)/plant/:id(.:format)' => 'plants#show', :via => :get
       match '/:key(.:format)/plant' => 'plants#index', :via => :get
     end
