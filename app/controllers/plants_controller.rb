@@ -6,21 +6,9 @@ class PlantsController < ApplicationController
 
   def index
     @plants = Plant.where(:user => current_user)
-    respond_to do |format|
-      format.html
-      format.json {
-        render :json => @plant.to_json(:include => {:global_kind => {:include => :global_treatment, :only => [:name, :latin_name]}}, :only => [:id, :name, :description])
-      }
-    end
   end
 
   def show
-    respond_to do |format|
-      format.html
-      format.json {
-        render :json => @plant.to_json(:include => {:global_kind => {:include => :global_treatment, :only => [:name, :latin_name]}}, :only => [:id, :name, :description])
-      }
-    end
   end
 
   def new
@@ -31,35 +19,24 @@ class PlantsController < ApplicationController
   end
 
   def create
-    respond_to do |format|
-      if @plant.save
-        format.html { redirect_to @plant, notice: 'Plant was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @plant }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @plant.errors, status: :unprocessable_entity }
-      end
+    if @plant.save
+      redirect_to @plant, notice: 'Plant was successfully created.'
+    else
+      format.html { render action: 'new' }
     end
   end
 
   def update
-    respond_to do |format|
-      if @plant.update(plant_params)
-        format.html { redirect_to @plant, notice: 'Plant was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @plant.errors, status: :unprocessable_entity }
-      end
+    if @plant.update(plant_params)
+      format.html { redirect_to @plant, notice: 'Plant was successfully updated.' }
+    else
+      format.html { render action: 'edit' }
     end
   end
 
   def destroy
     @plant.destroy
-    respond_to do |format|
-      format.html { redirect_to plants_url }
-      format.json { head :no_content }
-    end
+    redirect_to plants_url
   end
 
   private
