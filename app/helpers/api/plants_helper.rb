@@ -1,25 +1,11 @@
 module Api::PlantsHelper
-  def json_format
-    return :include => {
-        :global_kind => {
-            :include => {
-                :global_treatment => {
-                    :only => [
-                        :watering,
-                        :insolation,
-                        :temperature_min,
-                        :temperature_max,
-                        :humidity,
-                        :comment
-                    ]}},
-            :only => [
-                :name,
-                :latin_name
-            ]}},
-        :only => [
-            :name,
-            :description
-        ]
+
+  include Api::KindsHelper
+
+  def json_format_plant
+    return :include => {:global_kind => json_format_kind},
+        :only => [:id, :name, :description]
   end
+
 end
 
