@@ -10,6 +10,7 @@ PlantStore::Application.routes.draw do
       match '/token' => 'tokens#create', :via => :get
       match '/:key(.:format)/plant/:id(.:format)' => 'plants#show', :via => :get
       match '/:key(.:format)/plant' => 'plants#index', :via => :get
+      match '/:key(.:format)/plant' => 'plants#create', :via => :post
       match '/:key(.:format)/kind' => 'kinds#index', :via => :get
     end
   end
