@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140109204404) do
+ActiveRecord::Schema.define(version: 20140218192254) do
 
   create_table "global_kinds", force: true do |t|
     t.string   "name"
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 20140109204404) do
     t.integer  "global_kind_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "watering_season"
+    t.string   "watering_rest"
+    t.boolean  "dry_between_watering_season"
+    t.boolean  "dry_between_watering_rest"
+    t.integer  "season_temp_min"
+    t.integer  "season_temp_max"
+    t.integer  "rest_temp_min"
+    t.integer  "rest_temp_max"
   end
 
   add_index "global_treatments", ["global_kind_id"], name: "index_global_treatments_on_global_kind_id"

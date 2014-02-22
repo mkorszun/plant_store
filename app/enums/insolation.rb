@@ -7,5 +7,5 @@ end
 class Insolation::Indirect < Insolation
 end
 
-class Insolation::Penumbra < Insolation
+class Insolation::Partialy_Shaded < Insolation
 end

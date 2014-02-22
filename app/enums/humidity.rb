@@ -4,7 +4,7 @@ end
 class Humidity::Low < Humidity
 end
 
-class Humidity::Medium < Humidity
+class Humidity::Moderate < Humidity
 end
 
 class Humidity::High < Humidity

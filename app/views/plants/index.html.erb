@@ -7,8 +7,7 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:user_id) %></th>
+      <th><%= model_class.human_attribute_name("kind") %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -18,8 +17,7 @@
       <tr>
         <td><%= link_to plant.id, plant_path(plant) %></td>
         <td><%= plant.name %></td>
-        <td><%= plant.description %></td>
-        <td><%= plant.user_id %></td>
+        <td><%= plant.global_kind.name %> (<%= plant.global_kind.latin_name %>)</td>
         <td><%=l plant.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

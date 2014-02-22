@@ -28,7 +28,7 @@ class PlantsController < ApplicationController
 
   def update
     if @plant.update(plant_params)
-      format.html { redirect_to @plant, notice: 'Plant was successfully updated.' }
+      redirect_to @plant, notice: 'Plant was successfully updated.'
     else
       format.html { render action: 'edit' }
     end

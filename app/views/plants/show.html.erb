@@ -7,22 +7,45 @@
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @plant.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @plant.user_id %></dd>
+  <dd><%= @plant.description %></dd>
   <% if @plant.global_kind.global_treatment %>
       <dt><strong>Kind name:</strong></dt>
       <dd><%= @plant.global_kind.name %> (<%= @plant.global_kind.latin_name %>)</dd>
-      <dt><strong>Watering:</strong></dt>
-      <dd><%= @plant.global_kind.global_treatment.watering %></dd>
-      <dt><strong>Insolation:</strong></dt>
-      <dd><%= @plant.global_kind.global_treatment.insolation %></dd>
-      <dt><strong>Temperature min:</strong></dt>
-      <dd><%= @plant.global_kind.global_treatment.temperature_min %></dd>
-      <dt><strong>Temperature max:</strong></dt>
-      <dd><%= @plant.global_kind.global_treatment.temperature_max %></dd>
-      <dt><strong>Humidity:</strong></dt>
-      <dd><%= @plant.global_kind.global_treatment.humidity %></dd>
-      <dt><strong>Comment:</strong></dt>
-      <dd><%= @plant.global_kind.global_treatment.comment %></dd>
+
+      <dt><strong>Watering season:</strong></dt>
+      <dd><%= @plant.global_kind.global_treatment.watering_season %></dd>
+
+      <dt><strong>Watering rest:</strong></dt>
+      <dd><%= @plant.global_kind.global_treatment.watering_rest %></dd>
+
+      <dt><strong>Dry between in watering season:</strong></dt>
+      <dd><%= @plant.global_kind.global_treatment.dry_between_watering_season %></dd>
+
+      <dt><strong>Dry between out of watering season:</strong></dt>
+      <dd><%= @plant.global_kind.global_treatment.dry_between_watering_rest %></dd>
+
+      <dt><strong>Season temp min:</strong></dt>
+      <dd><%= @plant.global_kind.global_treatment.season_temp_min %></dd>
+
+      <dt><strong>Season temp max:</strong></dt>
+      <dd><%= @plant.global_kind.global_treatment.season_temp_max %></dd>
+
+      <dt><strong>Rest temp min:</strong></dt>
+      <dd><%= @plant.global_kind.global_treatment.rest_temp_min %></dd>
+
+      <dt><strong>Rest temp max:</strong></dt>
+      <dd><%= @plant.global_kind.global_treatment.rest_temp_max %></dd>
+
+      <!--<dt><strong>Insolation:</strong></dt>-->
+      <!--<dd><%= @plant.global_kind.global_treatment.insolation %></dd>-->
+      <!--<dt><strong>Temperature min:</strong></dt>-->
+      <!--<dd><%= @plant.global_kind.global_treatment.temperature_min %></dd>-->
+      <!--<dt><strong>Temperature max:</strong></dt>-->
+      <!--<dd><%= @plant.global_kind.global_treatment.temperature_max %></dd>-->
+      <!--<dt><strong>Humidity:</strong></dt>-->
+      <!--<dd><%= @plant.global_kind.global_treatment.humidity %></dd>-->
+      <!--<dt><strong>Comment:</strong></dt>-->
+      <!--<dd><%= @plant.global_kind.global_treatment.comment %></dd>-->
   <% end %>
 </dl>
 

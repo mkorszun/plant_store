@@ -1,11 +1,11 @@
 class Watering < ClassyEnum::Base
 end
 
-class Watering::Abundant < Watering
+class Watering::Fugal < Watering
 end
 
 class Watering::Moderate < Watering
 end
 
-class Watering::Sparing < Watering
+class Watering::Plentiful < Watering
 end

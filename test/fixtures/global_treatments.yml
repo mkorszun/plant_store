@@ -2,72 +2,266 @@
 
 one:
   id: 1
-  watering: moderate
-  insolation: indirect
-  temperature_min: 14
-  temperature_max: 21
-  humidity: low
+  watering_season: moderate
+  watering_rest: moderate
+  dry_between_watering_season: false
+  dry_between_watering_rest: false
+  insolation: partialy_shaded
+  season_temp_min: 24
+  season_temp_max: 27
+  rest_temp_min: 13
+  rest_temp_max: -1
+  humidity: high
   global_kind_id: 1
 
 two:
   id: 2
-  watering: abundant
+  watering_season: fugal
+  watering_rest: fugal
+  dry_between_watering_season: true
+  dry_between_watering_rest: true
   insolation: full
-  temperature_min: 16
-  temperature_max: 21
-  humidity: high
+  season_temp_min: 16
+  season_temp_max: 24
+  rest_temp_min: 10
+  rest_temp_max: -1
+  humidity: low
   global_kind_id: 2
 
 three:
   id: 3
-  watering: moderate
+  watering_season: moderate
+  watering_rest: fugal
+  dry_between_watering_season: false
+  dry_between_watering_rest: false
   insolation: indirect
-  temperature_min: 16
-  temperature_max: 21
-  humidity: medium
+  season_temp_min: 21
+  season_temp_max: 27
+  rest_temp_min: 18
+  rest_temp_max: -1
+  humidity: high
   global_kind_id: 3
 
 four:
   id: 4
-  watering: moderate
-  insolation: full
-  temperature_min: 16
-  temperature_max: 21
-  humidity: medium
+  watering_season: moderate
+  watering_rest: moderate
+  dry_between_watering_season: true
+  dry_between_watering_rest: true
+  insolation: indirect
+  season_temp_min: 18
+  season_temp_max: 24
+  rest_temp_min: 10
+  rest_temp_max: -1
+  humidity: low
   global_kind_id: 4
 
 five:
   id: 5
-  watering: moderate
-  insolation: full
-  temperature_min: 18
-  temperature_max: 21
-  humidity: medium
+  watering_season: moderate
+  watering_rest: fugal
+  dry_between_watering_season: false
+  dry_between_watering_rest: false
+  insolation: indirect
+  season_temp_min: 18
+  season_temp_max: 24
+  rest_temp_min: 16
+  rest_temp_max: -1
+  humidity: high
   global_kind_id: 5
 
 six:
   id: 6
-  watering: moderate
-  insolation: indirect
-  temperature_min: 16
-  temperature_max: 21
-  humidity: medium
+  watering_season: plentiful
+  watering_rest: plentiful
+  dry_between_watering_season: false
+  dry_between_watering_rest: true
+  insolation: full
+  season_temp_min: 16
+  season_temp_max: 21
+  rest_temp_min: 7
+  rest_temp_max: -1
+  humidity: moderate
   global_kind_id: 6
 
 seven:
   id: 7
-  watering: moderate
-  insolation: full
-  temperature_min: 16
-  temperature_max: 21
-  humidity: high
+  watering_season: moderate
+  watering_rest: moderate
+  dry_between_watering_season: true
+  dry_between_watering_rest: true
+  insolation: indirect
+  season_temp_min: 16
+  season_temp_max: 21
+  rest_temp_min: 13
+  rest_temp_max: -1
+  humidity: moderate
   global_kind_id: 7
 
 eight:
   id: 8
-  watering: abundant
+  watering_season: moderate
+  watering_rest: moderate
+  dry_between_watering_season: true
+  dry_between_watering_rest: true
   insolation: indirect
-  temperature_min: 16
-  temperature_max: 21
-  humidity: high
+  season_temp_min: 16
+  season_temp_max: 21
+  rest_temp_min: 10
+  rest_temp_max: -1
+  humidity: moderate
   global_kind_id: 8
+
+nine:
+  id: 9
+  watering_season: moderate
+  watering_rest: moderate
+  dry_between_watering_season: true
+  dry_between_watering_rest: true
+  insolation: indirect
+  season_temp_min: 14
+  season_temp_max: 21
+  rest_temp_min: 14
+  rest_temp_max: -1
+  humidity: low
+  global_kind_id: 9
+
+ten:
+  id: 10
+  watering_season: plentiful
+  watering_rest: moderate
+  dry_between_watering_season: false
+  dry_between_watering_rest: true
+  insolation: full
+  season_temp_min: 16
+  season_temp_max: 21
+  rest_temp_min: 12
+  rest_temp_max: -1
+  humidity: high
+  global_kind_id: 10
+
+eleven:
+  id: 11
+  watering_season: moderate
+  watering_rest: fugal
+  dry_between_watering_season: true
+  dry_between_watering_rest: true
+  insolation: indirect
+  season_temp_min: 18
+  season_temp_max: 24
+  rest_temp_min: 10
+  rest_temp_max: -1
+  humidity: high
+  global_kind_id: 11
+
+twelve:
+  id: 12
+  watering_season: plentiful
+  watering_rest: plentiful
+  dry_between_watering_season: false
+  dry_between_watering_rest: true
+  insolation: indirect
+  season_temp_min: 16
+  season_temp_max: 21
+  rest_temp_min: 10
+  rest_temp_max: -1
+  humidity: high
+  global_kind_id: 12
+
+thirteen:
+  id: 13
+  watering_season: moderate
+  watering_rest: fugal
+  dry_between_watering_season: true
+  dry_between_watering_rest: true
+  insolation: full
+  season_temp_min: 18
+  season_temp_max: 21
+  rest_temp_min: 13
+  rest_temp_max: -1
+  humidity: moderate
+  global_kind_id: 13
+
+fourteen:
+  id: 14
+  watering_season: moderate
+  watering_rest: moderate
+  dry_between_watering_season: true
+  dry_between_watering_rest: true
+  insolation: indirect
+  season_temp_min: 16
+  season_temp_max: 21
+  rest_temp_min: 16
+  rest_temp_max: -1
+  humidity: moderate
+  global_kind_id: 14
+
+fifteen:
+  id: 15
+  watering_season: moderate
+  watering_rest: moderate
+  dry_between_watering_season: false
+  dry_between_watering_rest: true
+  insolation: indirect
+  season_temp_min: 16
+  season_temp_max: 21
+  rest_temp_min: 7
+  rest_temp_max: -1
+  humidity: high
+  global_kind_id: 15
+
+sixteen:
+  id: 16
+  watering_season: moderate
+  watering_rest: fugal
+  dry_between_watering_season: false
+  dry_between_watering_rest: false
+  insolation: indirect
+  season_temp_min: 16
+  season_temp_max: 21
+  rest_temp_min: 13
+  rest_temp_max: -1
+  humidity: high
+  global_kind_id: 16
+
+seventeen:
+  id: 17
+  watering_season: plentiful
+  watering_rest: plentiful
+  dry_between_watering_season: false
+  dry_between_watering_rest: true
+  insolation: indirect
+  season_temp_min: 16
+  season_temp_max: 21
+  rest_temp_min: 7
+  rest_temp_max: -1
+  humidity: high
+  global_kind_id: 17
+
+eighteen:
+  id: 18
+  watering_season: moderate
+  watering_rest: fugal
+  dry_between_watering_season: false
+  dry_between_watering_rest: true
+  insolation: indirect
+  season_temp_min: 16
+  season_temp_max: 21
+  rest_temp_min: 10
+  rest_temp_max: -1
+  humidity: low
+  global_kind_id: 18
+
+nineteen:
+  id: 19
+  watering_season: moderate
+  watering_rest: fugal
+  dry_between_watering_season: true
+  dry_between_watering_rest: true
+  insolation: partialy_shaded
+  season_temp_min: 21
+  season_temp_max: 27
+  rest_temp_min: 18
+  rest_temp_max: -1
+  humidity: moderate
+  global_kind_id: 19

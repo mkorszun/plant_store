@@ -6,4 +6,7 @@ class GlobalTreatment < ActiveRecord::Base
   classy_enum_attr :watering
   classy_enum_attr :humidity
 
+  classy_enum_attr :watering_season, enum: 'Watering'
+  classy_enum_attr :watering_rest, enum: 'Watering'
+
 end

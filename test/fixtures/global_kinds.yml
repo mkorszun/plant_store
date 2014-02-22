@@ -2,40 +2,95 @@
 
 one:
   id: 1
-  name: Gerbera
-  latin_name: Gerbera jamesonii
+  name: Aechmea
+  latin_name: Aechmea fasciata
 
 two:
   id: 2
-  name: Chinese hibiscus
-  latin_name: Hibiscus rosa-sinensis
+  name: Century plant
+  latin_name: Agave americana
 
 three:
   id: 3
-  name: Dracaena
-  latin_name: Dracena marginata
+  name: Kris plant
+  latin_name: Alocasia sanderiana
 
 four:
   id: 4
-  name: Benjamin's fig
-  latin_name: Ficus benjamina
+  name: True aloe
+  latin_name: Aloe barbadensis
 
 five:
   id: 5
-  name: Snake plant
-  latin_name: Sansevieria trifasciata
+  name: Garden kroton
+  latin_name: Codiaeum variegatum
 
 six:
   id: 6
-  name: Australian native monstera
-  latin_name: Scindapsus aureus
+  name: Silver dolar plant
+  latin_name: Crassula arborescens
 
 seven:
   id: 7
-  name: Dwarf Umbrella Tree
-  latin_name: Schefflera arboricola
+  name: Dragon tree
+  latin_name: Dracena marginata
 
 eight:
   id: 8
-  name: Sword Fern
+  name: Weeping fig
+  latin_name: Ficus benjamina
+
+nine:
+  id: 9
+  name: Barberton daisy
+  latin_name: Gerbera jamesonii
+
+ten:
+  id: 10
+  name: Hibiscus
+  latin_name: Hibiscus rosa-sinensis
+
+eleven:
+  id: 11
+  name: Monstereo
+  latin_name: Monstera deliciosa
+
+twelve:
+  id: 12
+  name: Sword fern
   latin_name: Nephrolepsis exaltata
+
+thirteen:
+  id: 13
+  name: Snake plant
+  latin_name: Sansevieria trifasciata
+
+fourteen:
+  id: 14
+  name: Devil's ivy
+  latin_name: Epipremnum aureus
+
+fifteen:
+  id: 15
+  name: Dwarf umbrella tree
+  latin_name: Schefflera arboricola
+
+sixteen:
+  id: 16
+  name: Peace lilly
+  latin_name: Spathiphyllum wallisi
+
+seventeen:
+  id: 17
+  name: Moses in the cradle
+  latin_name: Tradescantia fluminensis
+
+eighteen:
+  id: 18
+  name: Giant yucca
+  latin_name: Yucca elephantipes
+
+nineteen:
+  id: 19
+  name: Zanzibar gem
+  latin_name: Zamioculcas zamiifolia
