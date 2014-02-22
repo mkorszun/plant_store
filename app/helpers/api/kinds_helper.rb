@@ -4,10 +4,15 @@ module Api::KindsHelper
     return :include => {
         :global_treatment => {
             :only => [
-                :watering,
+                :watering_season,
+                :watering_rest,
+                :dry_between_watering_season,
+                :dry_between_watering_rest,
                 :insolation,
-                :temperature_min,
-                :temperature_max,
+                :season_temp_min,
+                :season_temp_max,
+                :rest_temp_min,
+                :rest_temp_max,
                 :humidity,
                 :comment
             ]}},
